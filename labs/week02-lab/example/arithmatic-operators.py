@@ -9,7 +9,7 @@ print("=" * 50)
 a = 15
 b = 4
 
-print(f"a = {a}, b = {b}")
+print(f"a = {a}, b = {b}") # a = 15, b =4
 print()
 
 # Addition (+)
