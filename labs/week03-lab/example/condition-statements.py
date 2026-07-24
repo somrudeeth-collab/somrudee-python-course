@@ -1,14 +1,15 @@
 # Simple if statement
 age = int(input("Enter your age: "))
-if age >= 18:
+if age >= ฝั่ง ซ มากกว่า ฝั่ง ข  18:
     print("You are an adult")
+    x=18 บรรทัดต้องเท่ากัน 
 
 # if-else statement
-temperature = 25
+temperature = 25 มากกว่า 30 หรือไม่
 if temperature > 30:
     print("It's hot outside")
 else:
-    print("It's not too hot")
+    print("It's not too hot") ไม่
 
 # if-elif-else statement
 score = 85
