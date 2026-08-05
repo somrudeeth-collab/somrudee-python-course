@@ -1,0 +1,64 @@
+Python
+
+prices = []
+
+print("Enter prices of 6 items:")
+for i in range(6):
+    price = int(input(f"Item {i + 1}: "))
+    prices.append(price)
+
+budget = int(input("\nEnter total budget: "))
+
+current_total = 0
+bought_items = []
+
+print()
+
+for i in range(6):
+    print(f"Item {i + 1} = {prices[i]} -> ", end="")
+
+    if current_total + prices[i] <= budget:
+        print("buy")
+        current_total += prices[i]
+        bought_items.append(prices[i])
+    else:
+        print("cannot buy")
+
+    print(f"Current total = {current_total}\n")
+
+print(f"Bought items: {bought_items}")
+print(f"Total spent: {current_total}")
+print(f"Remaining budget: {budget - current_total}")
+
+
+Enter prices of 6 items:
+Item 1: 20
+Item 2: 45
+Item 3: 60
+Item 4: 15
+Item 5: 30
+Item 6: 25
+
+Enter total budget: 100
+
+Item 1 = 20 -> buy
+Current total = 20
+
+Item 2 = 45 -> buy
+Current total = 65
+
+Item 3 = 60 -> cannot buy
+Current total = 65
+
+Item 4 = 15 -> buy
+Current total = 80
+
+Item 5 = 30 -> cannot buy
+Current total = 80
+
+Item 6 = 25 -> cannot buy
+Current total = 80
+
+Bought items: [20, 45, 15]
+Total spent: 80
+Remaining budget: 20

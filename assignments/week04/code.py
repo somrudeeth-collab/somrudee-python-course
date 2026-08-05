@@ -43,5 +43,5 @@ if letters in [ 'a ','e','i','o','u','A','E','I','O','U']:
 
        #print (f "ตัวอักษร {letters}"):
 
-print("Your text have ,count, "vowels""):
+print( "Your text have ,count, "vowels""):
     
