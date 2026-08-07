@@ -7,13 +7,13 @@
 # =============================================================================
 print("=== PART 1: BASIC FUNCTIONS ===")
 
-# Example 1: Simple function without parameters
+# Example 1: Simple function without parameters ทดสอบฟังก์ชัน
 def say_hello():
     """A simple function that prints a greeting"""
     print("Hello, World!")
     print("Welcome to Python functions!")
 
-# Calling the function
+# Calling the function 
 print("Calling say_hello():")
 say_hello()
 print()
@@ -23,7 +23,7 @@ def draw_separator():
     """Draws a line separator"""
     print("-" * 40)
 
-draw_separator()
+draw_separator() ใช้งานฟังก์ชัน 
 print("This is between separators")
 draw_separator()
 print()
@@ -61,7 +61,17 @@ def calculate_rectangle_area(length, width):
     """Calculates and displays rectangle area"""
     area = length * width
     print(f"Rectangle with length {length} and width {width}")
+    print(f"Area = {length} def calculate_rectangle_area(length, width):
+    """Calculates and displays rectangle area"""
+    area = length * width
+    print(f"Rectangle with length {length} and width {width}")
     print(f"Area = {length} × {width} = {area}")
+    print()
+
+print("Calculating rectangle areas:")
+calculate_rectangle_area(5, 3)
+calculate_rectangle_area(10, 7)
+{width} = {area}")
     print()
 
 print("Calculating rectangle areas:")
@@ -117,6 +127,10 @@ result = multiply(4, 5) + square(3)
 print(f"multiply(4, 5) + square(3) = {multiply(4, 5)} + {square(3)} = {result}")
 print()
 
+#จงหาผลรันโปรแกรม # Example3 ด้านบน
+
+
+
 # =============================================================================
 # PART 4: DEFAULT PARAMETERS
 # =============================================================================
@@ -145,6 +159,7 @@ create_profile("Charlie", 30, "USA")  # All specified
 print()
 
 # Example 3: Power function with default exponent
+
 def power(base, exponent=2):
     """Calculates base raised to exponent (default: square)"""
     return base ** exponent
@@ -154,6 +169,8 @@ print(f"power(5) = {power(5)}")  # Square
 print(f"power(5, 3) = {power(5, 3)}")  # Cube
 print(f"power(2, 4) = {power(2, 4)}")  # Fourth power
 print()
+
+
 
 # =============================================================================
 # PART 5: VARIABLE SCOPE
