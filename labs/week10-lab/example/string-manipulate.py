@@ -189,7 +189,7 @@ print(str1)  # 10,shankar,20000
 
 str2 = '{} - {} - {}'.format(id_num, name, sal)
 print(str2)  # 10 - shankar - 20000
-
+strl2 = f'{id_num},{name},{sal}'
 str3 = 'id={}\nname={}\nsal={}'.format(id_num, name, sal)
 print(str3)
 
