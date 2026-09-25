@@ -12,13 +12,57 @@ class Rectangle:
 
     # Method to get the area
     def get_area(self):
-        pass
+        return  self.length * self.width
 
     # Method to get the perimeter
     def get_perimeter(self):
-        pass
+        return 2 * (self.length + self.width)
 
 
 rect = Rectangle(10, 5)
 print(rect.get_area())       # Should print 50
 print(rect.get_perimeter())  # Should print 30
+
+"""
+ขอให้เขียนคลาส Circle ที่ทำงานคล้ายคลึงกับคลาส Rectangle พร้อมตัวอย่างการใช้งาน
+"""
+
+class Rectangle:
+    #ปรับให้สอดคล้องกับความเป็นวงกลม
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    # Method to get the area ปรับสูตร วงกลม
+    def get_area(self):
+        return  self.length * self.width
+
+    # Method to get the perimeter ปรับสูตรเส้นรอบรูปวงกลม
+    def get_perimeter(self):
+        return 2 * (self.length + self.width)
+
+myCircle = Circle(10)
+print(myCircle.get_area())       
+print(myCircle.get_perimeter())
+
+#ผลลัพธิ์
+import math
+
+class Circle:
+    # กำหนดรัศมีของวงกลม
+    def __init__(self, radius):
+        self.radius = radius
+
+    # Method to get the area
+    def get_area(self):
+        return math.pi * self.radius ** 2
+
+    # Method to get the perimeter
+    def get_perimeter(self):
+        return 2 * math.pi * self.radius
+
+
+myCircle = Circle(10)
+
+print(myCircle.get_area())
+print(myCircle.get_perimeter())

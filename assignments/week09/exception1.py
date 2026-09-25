@@ -17,38 +17,35 @@
 ไม่สามารถหารด้วยศูนย์ได้
 จบการทำงาน
 """
+try:
+    num1 = float(input("ตัวเลขที่ 1: "))
+    num2 = float(input("ตัวเลขที่ 2: "))
+    operator = input("เครื่องหมาย (+, -, *, /): ")
 
-num1 = float(input("ตัวเลขที่ 1 :"))
-num2 = float(input("ตัวเลขที่ 2 :"))
-operator = input("เครื่องหมาย(+ - * / ):")
+    if operator == "+":
+        result = num1 + num2
+    elif operator == "-":
+        result = num1 - num2
+    elif operator == "*":
+        result = num1 * num2
+    elif operator == "/":
+        result = num1 / num2
+    else:
+        raise ValueError("เครื่องหมาย +, -, *, / เท่านั้น")
 
-resuit = 0
-if operator =="+":
-    resuit = num1+num2
-elif operator =="-":
-    resuit = num1-num2
-elif operator =="*":
-    resuit = num1*num2  
-elif operator =="/":
-    resuit = num1/num2 
+    print(f"{num1} {operator} {num2} = {result}")
+
+except ValueError:
+    print("กรุณากรอกข้อมูลที่เป็นตัวเลข หรือเลือกเครื่องหมาย +, -, *, / เท่านั้น")
+
+except ZeroDivisionError:
+    print("ไม่สามารถหารด้วยศูนย์ได้")
+
+except Exception:
+    print("เกิดข้อผิดพลาดบางอย่าง")
 
 else:
-    raise ValueError ("เครื่องหมาย +, -, *, / เท่านั้น") 
+    print("คำนวณข้อมูลเรียบร้อยแล้ว")
 
-    print(f"{num1} {operator} {num2} {resuit}")
-
-except ValueError:#กรณีผู้ใช้ไม่พิมพ์ตัวเลข
-print("กรุณากรอกข้อมูลที่เป็นตัวเลขเท่านั้น")
-
-except ZeroDivisionError: #กรณีผู้ใช้ใส่ตัวหารเป็น0
-print("ไม่สามารถหารด้วยศูนย์ได้")
-
-except Exception : กรณีอื่น
-print("มำอะไรไม่ได้บางอย่างแต่ไม่แน่ใจว่าคืออะไร")
-
-else : จะทำที่นี่ก็ต่อเมื่อไม่มี Exception
-print ("คำนวณข้อมูลเรียบร้อยแล้ว") 
-
-finally:ทำเสมอไม่ว่ามีหรือไม่มีExceptionเกิดขึ้นก็ตาม
-print("จบการทำงาน")
-
+finally:
+    print("จบการทำงาน")
